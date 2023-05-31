@@ -8,9 +8,14 @@ import "./App.css";
 
 const pokemonList = [
   {
-    name: "bulbasaur",
+    name: "bulbizarre",
     imgSrc:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
+  },
+  {
+    name: "salamèche",
+    imgSrc:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png",
   },
   {
     name: "mew",
@@ -22,7 +27,7 @@ function App() {
     <>
       <div>
         <MyTitle />
-        <Pokemoncard pokemon={pokemonList[0]} />
+        <Pokemoncard pokemon={pokemonList[1]} />
       </div>
     </>
   );

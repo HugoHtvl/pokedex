@@ -4,7 +4,8 @@
 // import viteLogo from "/vite.svg";
 import { useState } from "react";
 import MyTitle from "./components/MyTitle";
-import Pokemoncard from "./components/Pokemoncard";
+import PokemonCard from "./components/PokemonCard";
+import NavBar from "./components/NavBar";
 import "./App.css";
 
 const pokemonList = [
@@ -54,14 +55,17 @@ function App() {
     }
   };
 
-  // prettier-ignore
   return (
     <>
       <div>
         <MyTitle />
-        <Pokemoncard pokemon={pokemonList[pokemonIndex]} />
-        {pokemonIndex > 0 ? <button onClick={handleClickPrevious}>Previous</button> : <p></p>}
-        {pokemonIndex < pokemonList.length - 1 ? <button onClick={handleClickNext}>Next</button> : <p></p>}
+        <NavBar
+          pokemonIndex={pokemonIndex}
+          handleClickPrevious={handleClickPrevious}
+          handleClickNext={handleClickNext}
+          pokemonList={pokemonList}
+        />
+        <PokemonCard pokemon={pokemonList[pokemonIndex]} />
       </div>
     </>
   );

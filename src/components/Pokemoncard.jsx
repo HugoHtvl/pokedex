@@ -1,11 +1,10 @@
 /* eslint-disable */
 import PropTypes from "prop-types";
 
-function Pokemoncard(props) {
+const PokemonCard = (props) => {
 
   // const pokemon = props.pokemon
-
-  const {pokemon} = props
+  const { pokemon } = props;
 
   return (
     <figure>
@@ -15,11 +14,11 @@ function Pokemoncard(props) {
   );
 }
 
-Pokemoncard.propTypes = {
+PokemonCard.propTypes = {
   pokemon: PropTypes.shape({
     name: PropTypes.string.isRequired,
     imgSrc: PropTypes.string,
   }).isRequired,
 }
 
-export default Pokemoncard;
+export default PokemonCard;

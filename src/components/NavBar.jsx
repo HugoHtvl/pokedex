@@ -1,10 +1,10 @@
 // prettier-ignore
 
 const NavBar = (props) => {
-const { handleClickPokemon, pokemonList, pokemonIndex } = props;
+const { pokemonIndex, handleClickPokemon, pokemonList } = props;
 
 setTimeout(() => {
-  if (pokemonList[pokemonIndex].name === "pikachu") alert("Pika Pikachu !!!");
+  if (pokemonList[pokemonIndex].name === "Pikachu") alert("Pika Pikachu !!!");
 }, "100")
 
   return (
